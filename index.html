@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./done.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Todo list</title>
+</head>
+<body>
+    
+   <main class="main">
+
+    <h1 class="todo__heading">
+        Todo list
+    </h1>
+
+    <form class="todo__form">
+        
+        <input 
+        class="todo__add-input" 
+        type="text" 
+        placeholder="new todo..." 
+        required 
+        />
+        
+        <button class="btn" type="submit">Add</button>
+    </form> 
+    
+    <ul class="todos"></ul>
+    
+    <div class="btns">
+        
+        <button class="btn-all">
+            All <Strong class="btn-all-text">0</Strong>
+        </button>
+        
+        <button class="btn-completed">
+            Completed<Strong class="btn-completed-text">0</Strong>
+        </button>
+        
+        <button class="btn-uncompleted">
+            Uncompleted <Strong class="btn-uncompleted-text">0</Strong>
+        </button>
+
+        <button class="btn-clear">Clear</button>
+        
+    </div>
+    
+
+    <!-- Template -->
+
+    <template id="todo-template">
+        
+        <li class="todo">
+            
+            <div class="wrap">
+                <input class="todo__check-input" type="checkbox"/>
+            
+            <span class="todo__title">Nimadur</span>
+            </div>
+            
+            <button class="todo__delete-btn">x</button>
+        </li>
+        
+    </template>
+    
+   </main>
+    
+    <script src="./js/utilites.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
